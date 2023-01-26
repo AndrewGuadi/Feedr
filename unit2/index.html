@@ -1,0 +1,170 @@
+<!DOCtype html>
+<html class="no-js" lang="">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Feedr @ GA</title>
+      <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+          <!--the style="..." below was necessary because without a border there was a margin being observed between the header and main elements-->
+          <section style="border:solid;border-color:rgba(0, 0, 0, 0)" class="container">
+            <a href="#" id="logo"><h1>Feedr</h1></a>
+            <nav>
+              <!--this will be implmented so that the type of news diplayed will very (and api used)-->
+              <!-- <ul>
+                <li><a href="#">News Source: <span>Source Name</span></a>
+                  <ul>
+                      <li><a href="#">Equities News</a></li>
+                      <li><a href="#">World</a></li>
+                      <li><a href="#">Happy News</a></li>
+                  </ul>
+                </li>
+              </ul> -->
+              <section id="search">
+                <form id="search-filters">
+                  <input type="text" id="userQuery" name="name" value="" placeholder="TYPE HERE...." autocomplete="off">
+                  <!-- <a href="#"><img src="images/search.png" alt="" /></a> -->
+                  <a href="#"><input id="magnify" type="image" name="submit" src="images/search.png" style="position:relative;left:5%;" alt="Submit"/></a>
+                </form>
+              </section>
+            </nav>
+            <div class="clearfix"></div>
+            <div id="sourceToggleBox" class="source-toggle-box">
+
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="24/7+Wall+Street" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">24/7 Wall Street</h3>
+              </div>
+            
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="Bloomberg+Markets+and+Finance" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">Bloomberg Market</h3>
+              </div>
+            
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="CNN" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">CNN</h3>
+              </div>
+            
+
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="Forbes" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">Forbes</h3>
+              </div>
+
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="Market+Watch" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">Market Watch</h3>
+              </div>
+              
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="NYTimes" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">New York Times</h3>
+              </div>
+              
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="Yahoo Finance" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">Yahoo Finance</h3>
+              </div>
+
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="The Guardian" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">The Guardian</h3>
+              </div>
+
+              <div class="toggle-with-source">
+                <label class="switch">
+                  <input id="CNBC" type="checkbox" >
+                  <span class="slider"></span>
+                </label>
+                <h3 class="source-text">CNBC</h3>
+              </div>
+            </div>  
+        
+          </section>
+        </header>
+        <div id="popUp" class="loader">
+          <a href="#" class="closePopUp" onclick=hide()>X</a>
+          <div id="testBackground" class="container">
+            <h1 id="articleTitle"></h1>
+            <p id="articleContent">
+            </p>
+            <a id="articleUrl" href=# class="popUpAction" target="_blank"></a>
+          </div>
+        </div>
+        <div class="body-wrapper">
+          <div class='headlines-banner' id="headlines-banner">
+            <!-- <p class="moving-text"><span>TOP HEADLINES TOP HEADLINES TOP HEADLINES TOP HEADLINES TOP HEADLINES </span></p> -->
+            <p id="text"></p>
+          </div>
+          <div class="content-wrapper">
+            <section id="main" class="container popUp loader">
+              <!-- This is where the new articles will be loaded in (aka the left side) -->
+            </section>
+            <section id="right" class="conatiner popUp loader">
+              <!--This is the side that top stocks and top events will be listed (aka the right side)-->
+              <div id="top-stocks">
+                <h2>Top Mentioned Stocks</h2>
+                <div id="topStocksList">
+                  <!-- This is where the top ten stocks will be loaded in-->
+                  <div style="align-items: center;position: relative;left:50%;top:50%;">
+                    <!-- <img src="images/ajax_loader.gif" alt="loader"> -->
+                  </div>
+                </div>
+                
+              </div>
+              <div id="popular-events">
+                <h2>Popular Events</h2>
+                <div id="popularEventsList">
+                    <!--This will be populated by the tip events when the page is clicked an loaded-->
+                    <div style="align-items: center;position: relative;top:50%;">
+                      <!-- <img src="images/ajax_loader.gif" alt="loader"> -->
+                    </div>
+                    
+                </div>
+              </div>
+            
+            </section>
+          </div>
+        </div>
+        <script src="js/stockSymbols.js" defer></script>
+        <script src="js/app2.js" defer></script>
+    </body>
+</html>
