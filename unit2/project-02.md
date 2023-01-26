@@ -1,6 +1,6 @@
 # **Stock News**
 *Welcome to [AuthDynamic Financial](https://1066352.playcode.io/) , your one-stop destination for real-time stock information and market analysis. Utilizing the [Stock News API](https://stocknewsapi.com/) the user is able to access data relating to over 10,000 stocks from numerous international markets*
-![Welcome to AuthDynamic Financial](unit2/images/front_page.png)
+![Welcome to AuthDynamic Financial](images/front_page.png)
 
 
 ## Individual/Multiple Ticker News Queries
